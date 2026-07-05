@@ -1,0 +1,9 @@
+import threading
+def display(no): #def display(*No)
+    print(f"Inside Display {no} ",threading.get_ident())
+def main():
+    print("Inside main:",threading.get_ident())
+    tobj=threading.Thread(target=display,args=(11,))
+    tobj.start()
+if __name__=="__main__":
+    main()
