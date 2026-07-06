@@ -1,0 +1,22 @@
+import time
+
+def SumCube(No):
+    sum=0
+    for i in range(1,No+1):
+      sum=sum+(i**3)  
+    return sum
+def main():
+    Data=[10000000,20000000,30000000,40000000,50000000]
+    result=[]
+    start_time=time.perf_counter()
+    for value in Data:
+        ret=SumCube(value)
+        result.append(ret)
+    end_time=time.perf_counter()
+
+    print("Result is:")
+    print(result)
+    
+    print(f"Time required is: {end_time-start_time:.4f} seconds")
+if __name__=="__main__":
+    main()

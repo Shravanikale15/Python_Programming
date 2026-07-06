@@ -1,0 +1,22 @@
+import time
+import threading
+def sumEven(no):
+    print("TID of sumeven thread is:",threading.get_ident())
+def sumodd(no):
+    print("TID of sumodd thread is:",threading.get_ident())
+   
+def main():
+    print("TID of main thread is:",threading.get_ident())
+    start_time=time.perf_counter()
+
+    tboj1=threading.Thread(target=sumEven,args=(100000000,))
+    tboj2=threading.Thread(target=sumodd,args=(100000000,))
+    tboj1.start()
+    tboj2.start()
+    tboj1.join()
+    tboj2.join()
+    end_time=time.perf_counter()
+    print(f"Time requires is: {end_time-start_time:4f}")
+
+if __name__=="__main__":
+    main()

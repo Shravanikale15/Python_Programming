@@ -3,5 +3,4 @@ num2 = int(input("Enter second number: "))
 num3 = int(input("Enter third number: "))
 
 largest = lambda a, b, c: a if a >= b and a >= c else (b if b >= c else c)
-
 print("Largest number:", largest(num1, num2, num3))
