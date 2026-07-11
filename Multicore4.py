@@ -8,8 +8,8 @@ def SumCube(No):
     for i in range(1,No+1):
       sum=sum+(i**3)  
     return sum
-def main():
 
+def main():
     Data=[10000000,20000000,30000000,40000000,50000000]
     result=[]
     start_time=time.perf_counter()
