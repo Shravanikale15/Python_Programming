@@ -11,9 +11,10 @@ aobj=Arithmetic()
 no1=int(input("Enter First Number:"))
 no2=int(input("Enter Second Number:"))
 
- 
+#addition(aobj,no1,no2)
 ans=aobj.addtion(no1,no2)      
 print("Addition is :",ans)
 
+#subtraction(aobj,no1,no2)
 ans=aobj.subtraction(no1,no2)   
 print("Subtraction is :",ans)
